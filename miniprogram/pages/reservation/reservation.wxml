@@ -1,0 +1,45 @@
+<!--pages/reservation/reservation.wxml-->
+<view class="banner">
+  <image src="../../images/5d044a1b5b7e4.jpg"></image>
+</view>
+<view class="nav">
+  <view class="nav_main">
+    <view class="nav_main_title">位置：</view>
+    <picker bindchange="bindPickerChangeplace" vlaue="{{index}}" range="{{placearr}}">
+      <view class="picker">
+        {{placearr[index]}}
+      </view>
+    </picker>
+  </view>
+  <view class="nav_main">
+    <view class="nav_main_title">状态：</view>
+    <picker bindchange="bindPickerChangemod" vlaue="{{index1}}" range="{{modarr}}">
+      <view class="picker">
+        {{modarr[index1]}}
+      </view>
+    </picker>
+  </view>
+</view>
+<view class="seat">
+  <view class="box_main" wx:for="{{libLoc}}" wx:for-item="item1" wx:key="_id">
+    <view class="libLev" >{{item1.lib_Level}}</view>
+    <view class="seat_bar_main" wx:for="{{rmb}}" wx:for-item="item" wx:key="_id" bindtap="showxq" wx:if="{{item.level==item1._id}}"><!--座位中的楼层信息与图书馆楼层id一致-->
+      <view class="seat_bar"  wx:if="{{item.seatmod==0}}">
+        <view class="seat_bar_NO">编号</view>
+        <view class="seat_bar_NO_num">{{item.NO}}</view>
+        <view class="seat_mod">可预约</view>
+      </view>
+      <view class="seat_bar mod1"  wx:if="{{item.seatmod==1}}">
+        <view class="seat_bar_NO">编号</view>
+        <view class="seat_bar_NO_num">{{item.NO}}</view>
+        <view class="seat_mod">不可预约</view>
+      </view>
+      <view class="seat_bar mod2"  wx:if="{{item.seatmod==2}}">
+        <view class="seat_bar_NO">编号</view>
+        <view class="seat_bar_NO_num">{{item.NO}}</view>
+        <view class="seat_mod">已预约</view>
+      </view>
+    </view>
+    <view style="clear: both;"></view>
+  </view>
+</view>

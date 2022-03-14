@@ -1,0 +1,39 @@
+<!--pages/mine/mine.wxml-->
+<view class="my_top">
+  <image src="../../images/1035211.jpg"></image>
+</view>
+<view class="my_logo" wx:if="{{openid!=''}}">
+  <view class="my_logo_pho">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    <!-- <open-data type="userAvatarUrl"></open-data> -->
+  </view>
+  <view class="my_logo_text"> 
+    <text class="user-name">{{userInfo.nickName}}</text>
+    <!-- <open-data type="userNickName" lang="zh_CN" class="user-name"></open-data> -->
+  </view>
+</view>
+<view class="my_logo" wx:if="{{openid==''}}">
+  <view class="top_title">您还未授权登录</view>
+  <button bindtap="getopenid" type="default">登录</button>
+</view>
+
+<view class="nav_mine">
+  <view class="nav_bar">
+    <view class="nav_bar_logo">
+      <image src="../../images/wodemaidan.png"></image>
+    </view>
+    <view class="nav_bar_text">我的预约</view>
+  </view>
+  <view class="nav_bar">
+    <view class="nav_bar_logo">
+      <image src="../../images/zhanghaoguanli.png"></image>
+    </view>
+    <view class="nav_bar_text">个人资料</view>
+  </view>
+  <view class="nav_bar">
+    <view class="nav_bar_logo">
+      <image src="../../images/kefuguanli.png"></image>
+    </view>
+    <view class="nav_bar_text">客户服务</view>
+  </view>
+</view>

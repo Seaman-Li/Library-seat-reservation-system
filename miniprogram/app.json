@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/getuser/getuser",
+    "pages/index/index" ,
+    "pages/mine/mine",
+    "pages/reservation/reservation",
+    "pages/signIn/signIn",
+    "pages/bookSearch/bookSearch",
+    "pages/news/news"
+    
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3742fa",
+    "navigationBarTitleText": "图书馆预约小程序",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/shenghuo1.png",
+        "selectedIconPath": "images/shenghuo.png"
+      },
+      {
+        "pagePath": "pages/reservation/reservation",
+        "text": "座位",
+        "iconPath": "images/xuexiao1.png",
+        "selectedIconPath": "images/xuexiao.png"
+      },
+      {
+        "pagePath": "pages/signIn/signIn",
+        "text": "打卡",
+        "iconPath": "images/shoucangjia1.png",
+        "selectedIconPath": "images/shoucangjia.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/tuandui1.png",
+        "selectedIconPath": "images/tuandui.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

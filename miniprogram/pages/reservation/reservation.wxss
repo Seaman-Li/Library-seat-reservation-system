@@ -1,0 +1,83 @@
+.banner{
+  width: 100%;
+  height: 300rpx;
+}
+.banner image{
+  width: 100%;
+  height: 100%;
+}
+.nav{
+  width: 100%;
+  height: 80rpx;
+  background-color: rgb(234, 237, 240);
+}
+.nav_main{
+  line-height: 80rpx;
+  font-weight: 500;
+  font-size: 32rpx;
+  width: 300rpx;
+  height: 100%;
+  margin: 0 20rpx;
+  float: left;
+}
+.nav_main_title{
+  line-height: 80rpx;
+  float: left;
+}
+.picker{
+  float: left;
+}
+
+.seat{
+  width: 95%;
+  min-height: 300rpx;
+  margin: 0 auto;
+}
+.seat_bar_main{
+  width: 21%;
+  height: 200rpx;
+  margin: 30rpx 2%;
+  float: left;
+}
+.seat_bar{
+  width: 100%;
+  height: 100%;
+  background-color: rgb(187, 201, 238);
+  box-shadow: 0 0 20px rgb(0 0 0 / 5%);
+  border-radius: 10rpx;
+}
+.seat_bar_NO{
+  text-align: center;
+  padding-top: 30rpx;
+  font-weight: 600;
+}
+.seat_bar_NO_num{
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 60rpx;
+}
+.seat_mod{
+  text-align: center;
+  font-size: 25rpx;
+}
+.mod1{
+  background-color: rgb(230, 230, 230);
+  color: rgb(100, 100, 100);
+}
+.mod2{
+  background-color: rgb(165, 210, 174);
+  color: rgb(36, 36, 36);
+}
+
+.libLev{
+  line-height: 60rpx;
+  margin: 20rpx 5rpx;
+  padding-left: 10rpx;
+  border-left: 10rpx solid rebeccapurple;
+  font-weight: 600;
+}
+
+.box_main{
+  width: 100%;
+  min-height: 20rpx;
+}
