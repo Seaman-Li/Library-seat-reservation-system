@@ -1,45 +1,62 @@
-<!--pages/reservation/reservation.wxml-->
-<view class="banner">
-  <image src="../../images/5d044a1b5b7e4.jpg"></image>
+<!--pages/zwyd/zwyd.wxml-->
+<view class="back">
+  <image src="../../images/5d21f5a20be59.jpg"></image>
 </view>
-<view class="nav">
-  <view class="nav_main">
-    <view class="nav_main_title">位置：</view>
-    <picker bindchange="bindPickerChangeplace" vlaue="{{index}}" range="{{placearr}}">
-      <view class="picker">
-        {{placearr[index]}}
+<view class="main">
+  <view class="title">选座</view>
+  <view class="xzxx">
+    <view class="xzxx_box">
+      <view class="xzzz_box_title">
+        <view class="xzzz_box_title_icon">
+          <image src="../../images/calendar.png"></image>
+        </view>
+        <view class="xzzz_box_title_text">
+          选择日期
+        </view>
       </view>
-    </picker>
-  </view>
-  <view class="nav_main">
-    <view class="nav_main_title">状态：</view>
-    <picker bindchange="bindPickerChangemod" vlaue="{{index1}}" range="{{modarr}}">
-      <view class="picker">
-        {{modarr[index1]}}
-      </view>
-    </picker>
-  </view>
-</view>
-<view class="seat">
-  <view class="box_main" wx:for="{{libLoc}}" wx:for-item="item1" wx:key="_id">
-    <view class="libLev" >{{item1.lib_Level}}</view>
-    <view class="seat_bar_main" wx:for="{{rmb}}" wx:for-item="item" wx:key="_id" bindtap="showxq" wx:if="{{item.level==item1._id}}"><!--座位中的楼层信息与图书馆楼层id一致-->
-      <view class="seat_bar"  wx:if="{{item.seatmod==0}}">
-        <view class="seat_bar_NO">编号</view>
-        <view class="seat_bar_NO_num">{{item.NO}}</view>
-        <view class="seat_mod">可预约</view>
-      </view>
-      <view class="seat_bar mod1"  wx:if="{{item.seatmod==1}}">
-        <view class="seat_bar_NO">编号</view>
-        <view class="seat_bar_NO_num">{{item.NO}}</view>
-        <view class="seat_mod">不可预约</view>
-      </view>
-      <view class="seat_bar mod2"  wx:if="{{item.seatmod==2}}">
-        <view class="seat_bar_NO">编号</view>
-        <view class="seat_bar_NO_num">{{item.NO}}</view>
-        <view class="seat_mod">已预约</view>
+      <view class="xzxx_mian">
+        <view class="xzzz_mian_text">2021.02.10</view>
+        <view class="xzzz_mian_icon">∨</view>
       </view>
     </view>
-    <view style="clear: both;"></view>
+    <view class="xzxx_box1">
+      <view class="xzzz_box_title">
+        <view class="xzzz_box_title_icon">
+          <image src="../../images/online-tracking.png"></image>
+        </view>
+        <view class="xzzz_box_title_text">
+          选择时间
+        </view>
+      </view>
+      <view class="xzxx_mian">
+        <view class="xzzz_mian_text">{{timeInfo[timeIndex][0]}}</view>
+        <view class="xzzz_mian_icon">∨</view>
+      </view>
+    </view>
   </view>
+  <view class="zwxx">
+    <view class="zwxx_box_title">
+      <view class="xzzz_box_title_icon">
+        <image src="../../images/map.png"></image>
+      </view>
+      <view class="xzzz_box_title_text">
+        座位信息
+      </view>
+    </view>
+    <view class="zwxx_wz">{{seatarry[0].seatlist[0].lib_Level}} 座位编号:{{seatarry[0].NO}}</view>
+  </view>
+  <view class="yhxx">
+    <view class="zwxx_box_title">
+      <view class="xzzz_box_title_icon">
+        <image src="../../images/yh.png"></image>
+      </view>
+      <view class="xzzz_box_title_text">
+        用户信息
+      </view>
+    </view>
+    <view class="zwxx_wz">姓名：{{userinfo[0].username}}</view>
+    <view class="zwxx_wz">学院：{{userinfo[0].college}}</view>
+    <view class="zwxx_wz">年级：{{userinfo[0].grade}}</view>
+  </view>
+  <view class="lq" bindtap="confirm_seat">确认选座</view>
 </view>

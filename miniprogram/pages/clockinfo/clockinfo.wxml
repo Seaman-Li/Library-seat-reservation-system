@@ -1,0 +1,14 @@
+<!--pages/clockinfo/clockinfo.wxml-->
+<view class="window" wx:if="{{seatinfo == ''}}">
+  <view>没有打卡记录</view>
+</view>
+<view class="jqdk" wx:for="{{seatinfo}}">
+  <view class="jqdk_title">打卡记录</view>
+  <view class="jqdk_main">
+    <view class="jqdk_main_text1">座位: {{item.seatInfolist[0].NO}}</view>
+    <view class="jqdk_main_text2" wx:if="{{item.signmod!=''}}">打卡时间:  {{item.signtime}}</view>
+    <view class="jqdk_main_text2" wx:if="{{item.signmod==''}}">打卡时间:  暂未签到</view>
+    <view class="jqdk_main_text2" wx:if="{{item.signout!=''}}">签退时间:  {{item.signoutTime}}</view>
+    <view class="jqdk_main_text2" wx:if="{{item.signout==''}}">签退时间:  暂未签到</view>
+  </view>
+</view>

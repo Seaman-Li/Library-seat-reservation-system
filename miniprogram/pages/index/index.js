@@ -16,6 +16,25 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.cloud.callFunction({
+      name: 'open',
+      success: (res) => {
+        var usid = res.result.openid
+        console.log(usid)
+        this.setData({
+          openid: res.result.openid,
+        })
+        getApp().globalData.openid = res.result.openid
+        db.collection("user").where({ openid: res.result.openid }).get().then(res => {
+          console.log(res.data)
+          this.setData({
+            userInfo: res.data
+          })
+          wx.setStorageSync('userinfo', res.data)
+        })
+        wx.setStorageSync('openid', res.result.openid)
+      },
+    })
     db.collection("banner").get({
       success:res=>{
         // console.log(res)

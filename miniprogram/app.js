@@ -15,5 +15,8 @@ App({
     }
 
     this.globalData = {};
+  },
+  globalData:{
+    openid:''
   }
 });

@@ -1,12 +1,24 @@
 {
   "pages": [
-    "pages/getuser/getuser",
+    
     "pages/index/index" ,
     "pages/mine/mine",
-    "pages/reservation/reservation",
-    "pages/signIn/signIn",
+    "pages/seat/seat",
+    "pages/clockin/clockin",
+    "pages/clockinfo/clockinfo",
     "pages/bookSearch/bookSearch",
+    "pages/getuser/getuser",
+    "pages/profile/profile",
+    "pages/alterprofile/alterprofile",
+    "pages/reservation/reservation",
+    "pages/scanCode/scanCode",
+    "pages/myres/myres",
+    "pages/cancelres/cancelres" ,
     "pages/news/news"
+    
+    
+   
+   
     
   ],
   "window": {
@@ -28,16 +40,16 @@
         "selectedIconPath": "images/shenghuo.png"
       },
       {
-        "pagePath": "pages/reservation/reservation",
+        "pagePath": "pages/seat/seat",
         "text": "座位",
         "iconPath": "images/xuexiao1.png",
         "selectedIconPath": "images/xuexiao.png"
       },
       {
-        "pagePath": "pages/signIn/signIn",
+        "pagePath": "pages/clockin/clockin",
         "text": "打卡",
-        "iconPath": "images/shoucangjia1.png",
-        "selectedIconPath": "images/shoucangjia.png"
+        "iconPath": "images/guahao1.png",
+        "selectedIconPath": "images/guahao.png"
       },
       {
         "pagePath": "pages/mine/mine",
@@ -48,5 +60,8 @@
     ]
   },
   "sitemapLocation": "sitemap.json",
-  "style": "v2"
+  "style": "v2",
+  "useExtendedLib":{
+    "weui":true
+  }
 }

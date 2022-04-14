@@ -1,0 +1,35 @@
+<!--pages/profile/profile.wxml-->
+<view class="banner">
+  <image src="../../images/antu.jfif"></image>
+</view>
+
+<form catchsubmit="formSubmit">
+  <view class="profile-ban">
+    <view class="row">
+      <view class="text1">姓名：</view>
+      <input class="weui-input" name="name" value="{{userInfo[0].username}}" />
+    </view>
+    <view class="row">
+      <view class="text1">电话：</view>
+      <input class="weui-input" name="phone" type="number" value="{{userInfo[0].phone}}"/>
+    </view>
+    <view class="row">
+      <view class="text1">学院：</view>
+      <picker bindchange="bindchangecol" value="{{col_index}}" range="{{col_array}}">
+        <view class="picker">{{col_array[col_index]}}</view>
+      </picker>
+    </view>
+    <view class="row">
+      <view class="text1">学号：</view>
+      <input class="weui-input" name="stuID" type="number" value="{{userInfo[0].stuID}}"/>
+    </view>
+    <view class="row">
+      <view class="text1">年级：</view>
+      <picker bindchange="bindchangegra" value="{{gra_index}}" range="{{gra_array}}">
+        <view class="picker">{{gra_array[gra_index]}}</view>
+      </picker>
+    </view>
+    <button type="default" style="margin-top:20rpx;margin-bottom:60rpx" form-type="submit">修改</button>
+    <button type="default" style="margin-top:20rpx;margin-bottom:60rpx" form-type="reset">重置</button>
+  </view>
+</form>
